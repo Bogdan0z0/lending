@@ -1,0 +1,102 @@
+.feedback {
+    font-family: "DM Sans";
+    padding: 200px 0 100px;
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(3, 423px);
+        gap: 16px;
+        height: 100%;
+    }
+
+    &__item {
+        background: #000000;
+        border-radius: 32px;
+    }
+    &__item:nth-child(1),
+    &__item:nth-child(2),
+    &__item:nth-child(3) {
+        min-height: 301px;
+    }
+    &__item:nth-child(4),
+    &__item:nth-child(5),
+    &__item:nth-child(6) {
+        min-height: 344px;
+    }
+    &__body {
+        padding: 54px 0px 0px 50px;
+    }
+    &__rating {
+        margin-bottom: 21px;
+    }
+
+    &__text {
+        font-size: 36px;
+        line-height: 43px;
+        color: #ffffff;
+        margin: 0 56px 19px 0;
+    }
+
+    &__author {
+        font-size: 24px;
+        line-height: 29px;
+        color: rgba(255, 255, 255, 0.7);
+        padding-bottom: 20px;
+    }
+}
+@media (max-width: 1320px) {
+    .feedback {
+        &__items {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        &__body {
+            padding-left: 0;
+            display: flex;
+            flex-direction: column;
+            margin: 0 20px;
+        }
+        &__text {
+            font-size: 27px;
+            line-height: 37px;
+            margin-right: 0;
+        }
+    }
+}
+@media (max-width: 992px) {
+    .feedback {
+        padding: 70px 0px 70px;
+        &__text {
+            font-size: 25px;
+            line-height: 35px;
+            margin-right: 0;
+        }
+        &__author {
+            font-size: 20px;
+        }
+    }
+}
+@media (max-width: 767px) {
+    .feedback {
+        &__items {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5px;
+        }
+    }
+}
+@media (max-width: 572px) {
+    .feedback {
+        padding: 60px 0px 60px;
+        &__items {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 5px;
+        }
+        &__item {
+            max-height: none;
+            height: 100%;
+            padding: 10px 0;
+        }
+    }
+}

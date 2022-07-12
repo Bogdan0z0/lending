@@ -1,0 +1,142 @@
+.header {
+    font-family: "Inter";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: #191919;
+    &__body {
+        display: flex;
+        min-height: 119px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        display: flex;
+        flex: 0 1 159px;
+    }
+
+    &__menu {
+    }
+}
+.menu {
+    &__icon {
+        display: none;
+    }
+
+    &__body {
+    }
+
+    &__list {
+        display: flex;
+        gap: 40px;
+    }
+    &__item {
+        font-family: "DM Sans";
+        font-size: 18px;
+        color: #ffffff;
+        transition: 0.3s ease;
+        position: relative;
+        &:hover {
+            color: #118da8;
+        }
+    }
+}
+@media (max-width: 767px) {
+    body._lock {
+        overflow: hidden;
+    }
+    .header {
+        &__body {
+            min-height: 80px;
+        }
+        &__logo {
+            z-index: 3;
+        }
+        .menu {
+            &__body {
+                position: fixed;
+                top: -100%;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #191919;
+                display: flex;
+                justify-content: center;
+                overflow: auto;
+                transition: 0.3s ease;
+                &::before {
+                    content: "";
+                    position: fixed;
+                    width: 100%;
+                    height: 81px;
+                    top: 0;
+                    left: 0;
+                    background-color: #191919;
+                    z-index: 2;
+                }
+                &._active {
+                    top: 0;
+                }
+            }
+            &__list {
+                margin-top: 100px;
+                display: block;
+                text-align: center;
+                & li {
+                    margin-bottom: 40px;
+                }
+            }
+            &__item {
+                font-size: 28px;
+            }
+            &__icon {
+                display: block;
+                width: 30px;
+                height: 20px;
+                position: relative;
+                z-index: 5;
+                cursor: pointer;
+                &::after,
+                &::before,
+                & span {
+                    position: absolute;
+                    left: 0;
+                    width: 100%;
+                    height: 10%;
+                    background-color: #fff;
+                    transition: 0.3s ease;
+                }
+                &::after,
+                &::before {
+                    content: "";
+                }
+                &::after {
+                    top: 0;
+                }
+                &::before {
+                    bottom: 0;
+                }
+                & span {
+                    top: 9px;
+                    transform: scale(1) translate(0px -9px);
+                }
+                &._active {
+                    & span {
+                        transform: scale(0);
+                    }
+                    &::after {
+                        transform: rotate(45deg);
+                        top: 50%;
+                    }
+                    &::before {
+                        transform: rotate(-45deg);
+                        top: 50%;
+                    }
+                }
+            }
+        }
+    }
+}

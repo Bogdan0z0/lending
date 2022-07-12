@@ -1,0 +1,34 @@
+@import "_nullstyle";
+@import "_fonts";
+@import "_header";
+@import "_take";
+@import "_latest";
+@import "_about";
+@import "_subscribe";
+@import "_feedback";
+@import "_footer";
+
+body {
+    background-color: #191919;
+}
+.container {
+    max-width: 1320px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1320px) {
+    .container {
+        max-width: 970px;
+    }
+}
+@media (max-width: 992px) {
+    .container {
+        max-width: 750px;
+    }
+}
+@media (max-width: 767px) {
+    .container {
+        max-width: none;
+    }
+}

@@ -1,0 +1,116 @@
+.footer {
+    padding: 100px 0 127px;
+    color: #ffffff;
+    &__body {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__main {
+    }
+
+    &__logo {
+        margin-bottom: 23px;
+    }
+
+    &__socmedia {
+        display: flex;
+        gap: 10px;
+        & svg {
+            path {
+                transition: 0.3s ease;
+            }
+            &:hover {
+                path {
+                    stroke: #118da8;
+                }
+            }
+        }
+    }
+
+    &__other {
+        display: flex;
+    }
+    &__menu {
+    }
+
+    &__points {
+    }
+
+    &__listen {
+    }
+}
+
+.menu {
+    margin-right: 140px;
+    &__links {
+        li {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__link {
+        font-family: "DM Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+        color: #ffffff;
+        transition: 0.3s ease;
+        &:hover {
+            color: #118da8;
+        }
+    }
+}
+.points {
+    margin-right: 20.83px;
+    &__list {
+        li {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__link {
+        font-family: "DM Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+        color: #ffffff;
+        transition: 0.3s ease;
+        &:hover {
+            color: #118da8;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .footer {
+        padding: 50px 0 77px;
+    }
+    .menu {
+        margin-right: 40px;
+    }
+    .points {
+        margin-right: -40px;
+    }
+}
+@media (max-width: 767px) {
+    .footer {
+        padding: 20px 0;
+        &__body {
+            display: flex;
+            flex-direction: column;
+        }
+        &__other {
+            flex-wrap: wrap;
+        }
+    }
+    .points,
+    .menu {
+        margin: 20px 0px 20px;
+    }
+    .menu {
+        margin-right: 40px;
+    }
+}
